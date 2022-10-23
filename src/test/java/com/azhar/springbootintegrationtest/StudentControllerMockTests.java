@@ -31,6 +31,11 @@ public class StudentControllerMockTests {
         Optional<Student> optStudent = Optional.of( new Student("Rajesh","Bhojwani"));
         when(studentRepository.findById(1L)).thenReturn(optStudent);
 
+        //You can use assert methods, provided by JUnit or another assert framework,
+        // to check an expected result versus the actual result.
+        // Such statement are called asserts or assert statements.
+        // Assert statements typically allow to define messages which are shown if the test fails.
+
         assertTrue(studentService.retrieveStudent(1L).getName().contains("Rajesh"));
     }
 
